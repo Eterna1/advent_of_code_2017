@@ -35,7 +35,7 @@ class CPU:
     
     def __init__(self):
         self.registers = {}
-        self.max_even_held = -float("inf")
+        self.max_even_held = -float("inf") #nice trick
         
     def execute(self, instr):
         """
@@ -51,11 +51,7 @@ class CPU:
             print ("cond is false")
             
     def find_largest_reg_value(self):
-        max = - float("inf") # !!! nice trick !!!
-        for (key, val) in self.registers.items(): #iteritems in python 2
-            if val> max: # None > 2 in python 2, but doesn't work in python3
-                max = val
-        return max
+        return max(self.registers.values()) # nice trick
 
 def parse_condition(str):
     (a, cond_op, b) = str.split()
