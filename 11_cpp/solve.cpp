@@ -3,7 +3,6 @@
 #include <cmath>
 #include <boost/algorithm/string.hpp> //trim //sudo apt-get install libboost-dev
 
-//you need to provide input with ',' at the end. eg. "ne,ne,ne,", not "ne,ne,ne"
 
 using namespace std;
 
